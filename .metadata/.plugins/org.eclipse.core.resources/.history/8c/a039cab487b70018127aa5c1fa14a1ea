@@ -1,0 +1,57 @@
+package br.com.calculadora;
+import java.util.Scanner;
+
+public class Calculadora {
+
+	int numero1, numero2;
+	char operador;
+	
+	
+	public void somar(int n1, int n2) {
+		double resultado;
+		resultado = n1+n2;
+		System.out.println(resultado);
+		
+	}
+	
+	public void subtrair() {
+		double resultado;
+		resultado = numero1-numero2;
+		System.out.println(resultado);
+		
+	}
+	
+	public void dividir() {
+		double resultado;
+		resultado = numero1/numero2;
+		System.out.println(resultado);
+		
+	}
+	
+	public void multiplicar() {
+		double resultado;
+		resultado = numero1*numero2;
+		System.out.println(resultado);
+		
+	}
+	
+
+	
+	
+	
+	
+	
+	public Calculadora(int numero1, int numero2, char operador) {
+		this.numero1= numero1;
+		this.numero2 = numero2;
+		this.operador = operador;
+		
+	}
+	public static void main(String[] args) {
+		Calculadora obj1 = new Calculadora(5,3,'+');
+		obj1.somar(5, 3);
+	}
+	
+	
+
+}

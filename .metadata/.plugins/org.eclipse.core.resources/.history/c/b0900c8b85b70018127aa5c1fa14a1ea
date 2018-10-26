@@ -1,0 +1,32 @@
+package br.com.calculadora;
+
+public class Calculadora {
+
+	int numero1, numero2;
+	char operador;
+	
+	
+	public double somar(char  operador) {
+		this.operador = '+';
+		return numero1 + numero2;
+	}
+	
+
+	
+	
+	
+	
+	
+	public Calculadora(int numero1, int numero2, char operador) {
+		this.numero1= numero1;
+		this.numero2 = numero2;
+		this.operador= operador;
+	}
+	public static void main(String[] args) {
+		Calculadora cv = new Calculadora (5,3,'+');
+		System.out.println(cv);
+	}
+	
+	
+
+}

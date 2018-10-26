@@ -1,0 +1,54 @@
+public class ContaEnergia {
+
+	private double  kw, kmConsumido;
+	private String nome;
+	
+	public ContaEnergia(String nome, double kmConsumido) {
+		this.nome = nome;
+		this.kmConsumido = kmConsumido;
+		this.kw = 1.50;
+	}
+	
+	public ContaEnergia(){
+		this.nome = nome;
+		this.kmConsumido = kmConsumido;
+	}
+	
+	
+	
+	public double getKw() {
+		return kw;
+	}
+
+	public void setKw(double kw) {
+		if(this.kw >= 1.50)
+		this.kw = kw;
+	}
+
+	public double getKmConsumido() {
+		return kmConsumido;
+	}
+
+	public void setKmConsumido(double kmConsumido) {
+		this.kmConsumido = kmConsumido;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public double totalPagar() {
+		return this.kw * kmConsumido;
+	}
+	
+	public void exibir () {
+		System.out.println("Consumidor: " + totalPagar());
+	}
+
+}
+
+

@@ -1,0 +1,71 @@
+package br.com.meuprojeto.banco;
+
+public class Conta {
+	private String numero;
+	private float saldo;
+	
+	
+	public String getNumero() {
+		return numero;
+	}
+
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+
+	public float getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(float saldo) {
+		this.saldo = saldo;
+	}
+
+	public void creditar (float valor) {
+		saldo += valor;
+	}
+	
+	public void debitar(float valor) {
+		saldo -= valor;
+	}
+	
+	public Conta(String numeroDaConta, float saldoInicial) {
+		numero = numeroDaConta;
+		saldo = saldoInicial;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Conta c[] = new Conta[100];
+		
+		c[0] = new Conta("1234", 234);
+		c[0].creditar(5000);
+		
+		c[1] = new Conta("854-1", 500);
+		c[1].debitar(100);
+		
+		System.out.println("Numero da conta: " + c[0].numero  + " Saldo: " + c[0].saldo );
+		System.out.println("Numero da conta: " + c[1].numero  + " Saldo: " + c[1].saldo );
+
+		
+		
+//		Conta obj1 = new Conta("1234", 234);
+//		obj1.creditar(50);
+//		System.out.println("Numero da conta: " + obj1.numero + " Saldo da conta " + obj1.saldo);
+//		
+//		System.out.println("--------------------------------");
+//		
+//		Conta obj2 = new Conta("854-1", 500);
+//		obj2.creditar(1000); 
+//		System.out.println("Numero da conta: " + obj2.numero + " Saldo da conta " + obj2.saldo);
+		
+//		System.out.println("--------------------------------");
+		
+//		Conta obj3 = new Conta("5102-X", 10322);
+//		obj3.debitar(4533);
+//		obj3.creditar(2000);
+//		System.out.println("Numero da conta: " + obj3.numero + "Saldo em conta" + obj3.saldo);
+	}
+	
+}
